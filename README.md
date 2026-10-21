@@ -1,6 +1,6 @@
 # Stixx Muebles de confianza
 
-Sitio web estático de venta de muebles con catálogo de productos, sección de beneficios y formulario de contacto. Diseño responsive, desarrollado con HTML y CSS y listo para ejecutarse en un contenedor Docker con nginx.
+Sitio web estático de venta de muebles con catálogo de productos, sección de beneficios y formulario de contacto. Incluye carrito de compras profesional y imágenes de productos. Diseño responsive, desarrollado con HTML, CSS y JavaScript, listo para ejecutarse en un contenedor Docker con nginx.
 
 Trabajo Práctico N° 1 – Git y Docker.
 
@@ -8,6 +8,7 @@ Trabajo Práctico N° 1 – Git y Docker.
 
 - HTML5
 - CSS3
+- JavaScript (carrito de compras con `localStorage`)
 - nginx (imagen `nginx:alpine`)
 - Docker
 
@@ -24,9 +25,21 @@ Trabajo Práctico N° 1 – Git y Docker.
 ├── index.html
 ├── css/
 │   └── styles.css
+├── js/
+│   └── cart.js
 ├── Dockerfile
 └── README.md
 ```
+
+## Funcionalidades
+
+- Catálogo de 6 productos con imágenes
+- Carrito de compras lateral (agregar, modificar cantidades, eliminar)
+- Total del carrito y simulación de compra
+- Persistencia del carrito con `localStorage`
+- Notificaciones emergentes (toast)
+- Sección de beneficios y formulario de contacto
+- Diseño responsive
 
 ## Clonar el repositorio
 

@@ -3,19 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stixx Muebles de confianza</title>
+  <title>Venta de Muebles</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <nav class="navbar">
-    <div class="logo">Stixx Muebles de confianza</div>
+    <div class="logo">Venta de Muebles</div>
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#productos">Productos</a></li>
       <li><a href="#beneficios">Beneficios</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
+    <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
+      🛒
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
   </nav>
 
   <header class="hero" id="inicio">
@@ -28,51 +32,104 @@
     <h2 class="section-title">Nuestros productos</h2>
     <div class="products">
       <div class="product">
-        <div class="product-img">🛋️</div>
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Sofá Moderno" loading="lazy">
+        </div>
         <div class="product-info">
           <h3>Sofá Moderno</h3>
           <div class="price">$499.99</div>
-          <button class="btn-small">Agregar al carrito</button>
+          <button class="btn-small add-to-cart"
+            data-id="1"
+            data-name="Sofá Moderno"
+            data-price="499.99"
+            data-img="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80">
+            Agregar al carrito
+          </button>
         </div>
       </div>
+
       <div class="product">
-        <div class="product-img">🛏️</div>
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&q=80" alt="Cama King Size" loading="lazy">
+        </div>
         <div class="product-info">
           <h3>Cama King Size</h3>
           <div class="price">$699.99</div>
-          <button class="btn-small">Agregar al carrito</button>
+          <button class="btn-small add-to-cart"
+            data-id="2"
+            data-name="Cama King Size"
+            data-price="699.99"
+            data-img="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&q=80">
+            Agregar al carrito
+          </button>
         </div>
       </div>
+
       <div class="product">
-        <div class="product-img">🪑</div>
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=600&q=80" alt="Silla de Comedor" loading="lazy">
+        </div>
         <div class="product-info">
           <h3>Silla de Comedor</h3>
           <div class="price">$89.99</div>
-          <button class="btn-small">Agregar al carrito</button>
+          <button class="btn-small add-to-cart"
+            data-id="3"
+            data-name="Silla de Comedor"
+            data-price="89.99"
+            data-img="https://images.unsplash.com/photo-1503602642458-232111445657?w=600&q=80">
+            Agregar al carrito
+          </button>
         </div>
       </div>
+
       <div class="product">
-        <div class="product-img">🪵</div>
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1532372320572-cda25653a26d?w=600&q=80" alt="Mesa de Centro" loading="lazy">
+        </div>
         <div class="product-info">
           <h3>Mesa de Centro</h3>
           <div class="price">$199.99</div>
-          <button class="btn-small">Agregar al carrito</button>
+          <button class="btn-small add-to-cart"
+            data-id="4"
+            data-name="Mesa de Centro"
+            data-price="199.99"
+            data-img="https://images.unsplash.com/photo-1532372320572-cda25653a26d?w=600&q=80">
+            Agregar al carrito
+          </button>
         </div>
       </div>
+
       <div class="product">
-        <div class="product-img">🗄️</div>
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=600&q=80" alt="Escritorio" loading="lazy">
+        </div>
         <div class="product-info">
           <h3>Escritorio</h3>
           <div class="price">$249.99</div>
-          <button class="btn-small">Agregar al carrito</button>
+          <button class="btn-small add-to-cart"
+            data-id="5"
+            data-name="Escritorio"
+            data-price="249.99"
+            data-img="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=600&q=80">
+            Agregar al carrito
+          </button>
         </div>
       </div>
+
       <div class="product">
-        <div class="product-img">📚</div>
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1594620302200-9a762244a156?w=600&q=80" alt="Estantería" loading="lazy">
+        </div>
         <div class="product-info">
           <h3>Estantería</h3>
           <div class="price">$159.99</div>
-          <button class="btn-small">Agregar al carrito</button>
+          <button class="btn-small add-to-cart"
+            data-id="6"
+            data-name="Estantería"
+            data-price="159.99"
+            data-img="https://images.unsplash.com/photo-1594620302200-9a762244a156?w=600&q=80">
+            Agregar al carrito
+          </button>
         </div>
       </div>
     </div>
@@ -121,9 +178,38 @@
   </section>
 
   <footer>
-    <p><strong>Stixx Muebles de confianza</strong> © 2026 - Todos los derechos reservados</p>
+    <p><strong>Venta de Muebles</strong> © 2026 - Todos los derechos reservados</p>
     <p>Av. Principal 123 - Tel: (555) 123-4567 - info@ventademuebles.com</p>
   </footer>
 
+  <!-- Carrito -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras">
+    <div class="cart-header">
+      <h2>Tu carrito</h2>
+      <button class="cart-close" id="cartClose" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-empty" id="cartEmpty">
+      <div class="cart-empty-icon">🛒</div>
+      <p>Tu carrito está vacío</p>
+      <a href="#productos" class="btn" id="cartEmptyBtn">Ver productos</a>
+    </div>
+
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button class="btn checkout-btn" id="checkoutBtn">Finalizar compra</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/cart.js"></script>
 </body>
 </html>
