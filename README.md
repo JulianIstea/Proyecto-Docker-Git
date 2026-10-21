@@ -1,19 +1,67 @@
-# Venta de Muebles
+# Stixx Muebles de confianza
 
-Página web de venta de muebles.
+Sitio web estático de venta de muebles con catálogo de productos, sección de beneficios y formulario de contacto. Diseño responsive, desarrollado con HTML y CSS y listo para ejecutarse en un contenedor Docker con nginx.
 
-## Archivos
+Trabajo Práctico N° 1 – Git y Docker.
 
-- `index.html` - Página principal con HTML puro (sin estilos)
+## Tecnologías
 
-## Funcionalidades
+- HTML5
+- CSS3
+- nginx (imagen `nginx:alpine`)
+- Docker
 
-- Sección de inicio con bienvenida
-- Catálogo de 6 productos con precios
-- Lista de beneficios (envío, garantía, cuotas, cambios)
-- Formulario de contacto (nombre, correo, mensaje)
-- Navegación por anclas
+## Requisitos
 
-## Pendiente
+- [Git](https://git-scm.com/downloads) para clonar el repositorio
+- [Docker](https://www.docker.com/get-started) para construir y ejecutar la imagen
+- Un navegador web (Chrome, Firefox, Edge, etc.)
 
-- [ ] Agregar estilos (CSS)
+## Estructura del proyecto
+
+```
+.
+├── index.html
+├── css/
+│   └── styles.css
+├── Dockerfile
+└── README.md
+```
+
+## Clonar el repositorio
+
+```bash
+git clone https://github.com/TU_USUARIO/NOMBRE_DEL_REPO.git
+cd NOMBRE_DEL_REPO
+```
+
+## Ejecutar sin Docker
+
+Abrí el archivo `index.html` directamente en tu navegador.
+
+## Construir y ejecutar la imagen Docker
+
+1. **Construir la imagen:**
+
+   ```bash
+   docker build -t stixx-muebles .
+   ```
+
+2. **Ejecutar el contenedor:**
+
+   ```bash
+   docker run -d -p 8080:80 --name stixx stixx-muebles
+   ```
+
+3. **Abrir en el navegador:**
+
+   ```
+   http://localhost:8080
+   ```
+
+4. **Detener y eliminar el contenedor (cuando termines):**
+
+   ```bash
+   docker stop stixx
+   docker rm stixx
+   ```
